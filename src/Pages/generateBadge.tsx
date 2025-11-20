@@ -25,7 +25,7 @@ export function ConferenceBadgeGenerator() {
 
     try {
       const canvas = await html2canvas(badgeRef.current, {
-        scale: 3, // High-quality output
+        scale: 4, // High-quality output
         useCORS: true,
         backgroundColor: null,
       })

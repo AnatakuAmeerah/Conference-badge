@@ -121,7 +121,7 @@ export function BadgeTemplate({
       <img
         src={baseImage}
         alt="Conference Badge Template"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="relative inset-0 w-full h-full object-cover"
       />
 
       {/* User Image */}
@@ -130,9 +130,9 @@ export function BadgeTemplate({
           className="absolute overflow-hidden"
           style={{
             left: '9.2%',
-            top: '19.5%',
+            top: '17.7%',
             width: '42%',
-            height: '34%',
+            height: '32%',
             borderRadius: '10px',
           }}
         >
@@ -147,18 +147,18 @@ export function BadgeTemplate({
       {/* User Name */}
       {userName && (
         <div
-          className="absolute"
+          className="relative"
           style={{
             left: '8.2%',
-            top: '54.3%',
+            top: '-45.9%',
             width: '85%',
           }}
         >
           <p
             className="font-semibold text-black"
             style={{
-              fontSize: forDownload ? '100px' : 'clamp(20px, 3vw, 100px)',
-              lineHeight: '1.1',
+              fontSize: forDownload ? '50px' : 'clamp(18px, 1vw, 50px)',
+              lineHeight: '1',
               wordBreak: 'break-word',
             }}
           >
@@ -170,18 +170,18 @@ export function BadgeTemplate({
       {/* User Title */}
       {userTitle && (
         <div
-          className="absolute"
+          className="relative"
           style={{
             left: '8.2%',
-            top: '59.2%',
+            top: '-46%',
             width: '85%',
           }}
         >
           <p
             className="font-normal text-black"
             style={{
-              fontSize: forDownload ? '55px' : 'clamp(14px, 1.8vw, 55px)',
-              lineHeight: '1.2',
+              fontSize: forDownload ? '35px' : 'clamp(12px, 1vw, 35px)',
+              lineHeight: '1',
               wordBreak: 'break-word',
             }}
           >
