@@ -5,7 +5,7 @@ import { BadgeTemplate } from '../Components/badgeTemplate'
 
 export function ConferenceBadgeGenerator() {
   const [userName, setUserName] = useState('')
-  const [userTitle, setUserTitle] = useState('')
+  // const [userTitle, setUserTitle] = useState('')
   const [userImage, setUserImage] = useState<string | null>(null)
   const [isDownloading, setIsDownloading] = useState(false)
   const badgeRef = useRef<HTMLDivElement>(null)
@@ -46,7 +46,7 @@ export function ConferenceBadgeGenerator() {
   }
 
   const isComplete =
-    userName.trim() !== '' && userTitle.trim() !== '' && userImage !== null
+    userName.trim() !== '' && userImage !== null
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 py-8 px-4">
@@ -70,11 +70,10 @@ export function ConferenceBadgeGenerator() {
             <div ref={badgeRef} className="w-full max-w-md mx-auto">
               <BadgeTemplate
                 userName={userName}
-                userTitle={userTitle}
                 userImage={userImage}
               />
             </div>
-            {!userName && !userTitle && !userImage && (
+            {!userName && !userImage && (
               <p className="text-center text-gray-500 mt-4 text-sm">
                 Your badge preview will appear here
               </p>
@@ -91,7 +90,7 @@ export function ConferenceBadgeGenerator() {
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 <UserIcon className="inline w-4 h-4 mr-1" />
-                Full Name
+                Name
               </label>
               <input
                 type="text"
@@ -103,7 +102,7 @@ export function ConferenceBadgeGenerator() {
             </div>
 
             {/* Title Input */}
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 <UserIcon className="inline w-4 h-4 mr-1" />
                 Job Title
@@ -115,7 +114,7 @@ export function ConferenceBadgeGenerator() {
                 placeholder="Tell us what you do"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               />
-            </div>
+            </div> */}
 
             {/* Image Upload */}
             <div className="mb-8">

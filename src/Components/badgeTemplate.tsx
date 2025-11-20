@@ -98,14 +98,12 @@ import baseImage from '../assets/BASE IMAGE.png';
 
 interface BadgeTemplateProps {
   userName: string
-  userTitle: string
   userImage: string | null
   forDownload?: boolean
 }
 
 export function BadgeTemplate({
   userName,
-  userTitle,
   userImage,
   forDownload = false,
 }: BadgeTemplateProps) {
@@ -132,7 +130,7 @@ export function BadgeTemplate({
             left: '9.2%',
             top: '17.7%',
             width: '42%',
-            height: '32%',
+            height: '34%',
             borderRadius: '10px',
           }}
         >
@@ -168,7 +166,7 @@ export function BadgeTemplate({
       )}
 
       {/* User Title */}
-      {userTitle && (
+      {/* {userTitle && (
         <div
           className="relative"
           style={{
@@ -188,7 +186,7 @@ export function BadgeTemplate({
             {userTitle}
           </p>
         </div>
-      )}
+      )} */}
 
       {/* Optional: Add a subtle shadow overlay for better contrast on small screens */}
       {!forDownload && (
