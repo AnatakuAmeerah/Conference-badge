@@ -25,7 +25,7 @@ export function ConferenceBadgeGenerator() {
 
     try {
       const canvas = await html2canvas(badgeRef.current, {
-        scale: 4, // High-quality output
+        scale: 3,
         useCORS: true,
         backgroundColor: null,
       })
@@ -51,7 +51,6 @@ export function ConferenceBadgeGenerator() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
             Create Your Creatives' Voice Conference Badge
@@ -62,9 +61,9 @@ export function ConferenceBadgeGenerator() {
           </p>
         </div>
 
-        {/* Main Content */}
+        {/*the main content is displayed here */}
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Preview Section */}
+          {/* preview*/}
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Preview</h2>
             <div ref={badgeRef} className="w-full max-w-md mx-auto">
@@ -80,16 +79,17 @@ export function ConferenceBadgeGenerator() {
             )}
           </div>
 
-          {/* Form Section */}
+          {/* form section */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Your Information
             </h2>
 
-            {/* Name Input */}
+            {/* name inpput box */}
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 <UserIcon className="inline w-4 h-4 mr-1" />
+                
                 Name
               </label>
               <input
@@ -101,22 +101,7 @@ export function ConferenceBadgeGenerator() {
               />
             </div>
 
-            {/* Title Input */}
-            {/* <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                <UserIcon className="inline w-4 h-4 mr-1" />
-                Job Title
-              </label>
-              <input
-                type="text"
-                value={userTitle}
-                onChange={(e) => setUserTitle(e.target.value)}
-                placeholder="Tell us what you do"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
-              />
-            </div> */}
-
-            {/* Image Upload */}
+            {/* img upload */}
             <div className="mb-8">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 <UploadIcon className="inline w-4 h-4 mr-1" />
@@ -151,7 +136,7 @@ export function ConferenceBadgeGenerator() {
               </p>
             </div>
 
-            {/* Download Button */}
+            {/* download btn */}
             <button
               onClick={handleDownload}
               disabled={!isComplete || isDownloading}

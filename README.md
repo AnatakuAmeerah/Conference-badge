@@ -48,3 +48,9 @@ export default tseslint.config({
   },
 })
 ```
+Project overview
+*bug1: the image appears to wrap when downloaded
+fix:
+
+bug2: displacement of name on download (this is probably due to different properties on download)
+fix:
