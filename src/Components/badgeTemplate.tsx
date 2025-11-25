@@ -25,6 +25,10 @@ export function BadgeTemplate({
         src={baseImage}
         alt="Conference Badge Template"
         className="relative inset-0 w-full h-full object-cover"
+          style={{
+        aspectRatio: '3000/3793',
+        maxWidth: forDownload ? '3000px' : '100%',
+      }}
       />
 
       {/* User img */}
@@ -33,7 +37,7 @@ export function BadgeTemplate({
           className="absolute overflow-hidden"
           style={{
             left: '9.2%',
-            top: '19.4%',
+            top: '17.7%',
             width: '42%',
             height: '34%',
             borderRadius: '10px',
@@ -43,6 +47,7 @@ export function BadgeTemplate({
             src={userImage}
             alt="User"
             className="w-full h-full object-cover"
+             style={{ width: forDownload ? '1060px' : '100%' }}
           />
         </div>
       )}
